@@ -1,0 +1,11 @@
+Windows (PowerShell)
+
+Get-Content input.txt | python mapper.py > mapped.txt
+Get-Content mapped.txt | Sort-Object > sorted.txt
+Get-Content sorted.txt | python reducer.py
+
+Ubuntu / Linux
+
+cat input.txt | python3 mapper.py > mapped.txt
+sort mapped.txt > sorted.txt
+cat sorted.txt | python3 reducer.py
